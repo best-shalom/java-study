@@ -1,18 +1,8 @@
 package com.favor.study.service;
 
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-import com.rabbitmq.client.AMQP;
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.GetResponse;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
-import org.springframework.amqp.rabbit.core.ChannelCallback;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.Resource;
 
 /**
  * @author Qian
@@ -23,8 +13,6 @@ import javax.annotation.Resource;
 
 @Component
 public class MessageConsumerService {
-    @Resource
-    RabbitTemplate rabbitTemplate;
 
     /**
      * 监听指定消息队列
